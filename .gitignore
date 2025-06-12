@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+Generated_Code/
+
+# Docker
+**/Dockerfile
+docker-compose.override.yml
+.env
+
+# Logs
+*.log
+
+# Others
+*.db
+*.DS_Store
+Thumbs.db
