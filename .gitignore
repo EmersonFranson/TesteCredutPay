@@ -1,2 +1,30 @@
-# Visual Studio
+# Build
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.db
+*.log
+*.cache.json
+*.sourcelink.json
+*.AssemblyInfo.cs
+
+
+# VS-specific
 .vs/
+.vscode/
+*.user
+*.suo
+
+# Docker
+**/Dockerfile
+docker-compose.override.yml
+docker-compose.*
+*.yml
+
+# Outros
+.env
+*.DS_Store
+Thumbs.db
