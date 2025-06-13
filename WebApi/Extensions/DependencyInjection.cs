@@ -1,6 +1,19 @@
-﻿namespace WebApi.Extensions
+﻿using Infrastructure.Extensions;
+
+
+namespace WebApi.Extensions
 {
-    public class DependencyInjection
+    public static class DependencyInjection
     {
+        public static IServiceCollection AddProjectServices(this IServiceCollection services, IConfiguration configuration)
+        {
+            // Services da camada Application
+            //services.AddApplication();
+
+            // Services da camada Infrastructure
+            services.AddInfrastructure(configuration); // Passando o parâmetro 'configuration' necessário
+
+            return services;
+        }
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace Application.Entities.Wallets.Queries.GetWalletBalance
-{
-    public class GetWalletBalanceQuery
-    {
+﻿using MediatR;
 
-    }
+namespace Application.Entities.Wallets.Queries.GetWalletBalance
+{
+    public record GetWalletBalanceQuery(Guid UserId) : IRequest<decimal>;
 }

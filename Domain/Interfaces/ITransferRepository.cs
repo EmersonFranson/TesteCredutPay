@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Entities;
 
 namespace Domain.Interfaces
 {
-    internal interface ITransferRepository
+    public interface ITransferRepository
     {
+        Task<IEnumerable<Transfer>> GetByUserIdAsync(Guid userId,DateTime? dateInit, DateTime? dateEnd);
+        Task AddAsync(Transfer transfer);
     }
 }

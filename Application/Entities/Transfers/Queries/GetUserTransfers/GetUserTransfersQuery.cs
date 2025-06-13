@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace Application.Entities.Transfers.Queries.GetUserTransfers
 {
-    internal class GetUserTransfersQuery
-    {
-    }
+    public record GetUserTransfersQuery(Guid TransferId) : IRequest<decimal>;   
 }
