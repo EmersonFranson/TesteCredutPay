@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace Application.Entities.Users.Commands
 {
-    internal class CreateUserCommand
+    public record CreateUserCommand : IRequest<Guid>
     {
+        public string Name { get; set; }
+        public string Phone { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public DateTime DtBirth { get; set; }
     }
 }

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace Application.Entities.Transfers.Commmands.CreateTransfer
 {
-    internal class CreateTransferCommand
+    public record CreateTransferCommand : IRequest<Guid>
     {
+        public Guid IdOriginUser { get; set; }
+        public Guid IdDestinyUser { get; set; }
+        public decimal Amount { get; set; }
     }
 }

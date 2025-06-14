@@ -23,5 +23,10 @@ namespace Infrastructure.Persistence.Repositories
             var users = await _context.Users.ToListAsync();
             return users.AsEnumerable();
         }
+
+        public async Task<User> GetByIdAsync(Guid id)
+        {
+            return await _context.Users.FindAsync(id);
+        }
     }
 }

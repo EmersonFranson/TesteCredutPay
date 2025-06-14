@@ -17,7 +17,7 @@ namespace Infrastructure.Extensions
             // Repositórios
             services.AddScoped<ITransferRepository, TransferRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IWalletRepository, WalletRepository>();            
+            services.AddScoped<IWalletRepository, WalletRepository>();         
 
             return services;
         }

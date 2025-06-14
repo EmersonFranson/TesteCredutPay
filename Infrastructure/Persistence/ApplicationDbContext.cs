@@ -57,6 +57,16 @@ namespace Infrastructure.Persistence
                     .IsRequired()
                     .HasMaxLength(15);
 
+                entity.Property(u => u.Login)
+                    .HasColumnName("login")
+                    .IsRequired()
+                    .HasMaxLength(100);
+
+                entity.Property(u => u.Password)
+                    .HasColumnName("password")
+                    .IsRequired()
+                    .HasMaxLength(15);
+
                 entity.Property(u => u.DtBirth)
                     .HasColumnName("dt_birth")
                     .IsRequired();
@@ -71,11 +81,11 @@ namespace Infrastructure.Persistence
                     .HasColumnName("id")
                     .IsRequired();
 
-                entity.Property(t => t.IdOriginWallet)
+                entity.Property(t => t.IdOriginUser)
                     .HasColumnName("from_wallet_id")
                     .IsRequired();
 
-                entity.Property(t => t.IdDestinyWallet)
+                entity.Property(t => t.IdDestinyUser)
                     .HasColumnName("to_wallet_id")
                     .IsRequired();
 

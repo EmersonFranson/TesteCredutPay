@@ -11,7 +11,7 @@ namespace WebApi.Extensions
             //services.AddApplication();
 
             // Services da camada Infrastructure
-            services.AddInfrastructure(configuration); // Passando o parâmetro 'configuration' necessário
+            services.AddInfrastructure(configuration);
 
             return services;
         }

@@ -6,6 +6,7 @@ namespace Domain.Interfaces
     {
         Task AddAsync(User user);
         Task<IEnumerable<User>> GetAllAsync();
+        Task<User> GetByIdAsync(Guid id);
     }
 }
  

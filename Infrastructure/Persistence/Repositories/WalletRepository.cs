@@ -22,12 +22,14 @@ namespace Infrastructure.Persistence.Repositories
         public async Task AddAsync(Wallet wallet)
         {
             await _context.Wallets.AddAsync(wallet);
+            await _context.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(Wallet wallet)
         {
             _context.Wallets.Update(wallet);
             await Task.CompletedTask;
+            await _context.SaveChangesAsync();
         }
     }
 }

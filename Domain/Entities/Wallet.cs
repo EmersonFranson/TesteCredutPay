@@ -6,5 +6,6 @@
         public Guid IdUser { get; set; }
         public string NameWallet { get; set; }
         public decimal Balance { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }
