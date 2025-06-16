@@ -18,11 +18,6 @@ obj/
 *.user
 *.suo
 
-# Docker
-**/Dockerfile
-docker-compose.override.yml
-docker-compose.*
-*.yml
 
 # Outros
 .env
