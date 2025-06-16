@@ -8,7 +8,11 @@ API desenvolvida em .NET 8 utilizando arquitetura Clean Architecture com CQRS + 
 -Foi criado uma api de Autenticação apenas para fins de como ficaria a implementação, implementei a autenticação apenas na Api de adicionar saldo a carteira(AddBalance) onde implementei um data annotations [Authorize], para ser autenticado basta gerar um token na Api de Auth e passar como parametro na chamada via parametro Authorization Bearer Token.
 -Por conta de serem 2 dias de desenvolvimento não consegui implementar os testes e linter.
 -Usei uma abordagem de cqrs e MediatR pensando no desacoplamento dos serviços e na escalabilidade do projeto.
--A parte de autenticação acabou ficando mal distribuido pelo pouco tempo também de desenvolvimento.
+-A parte de autenticação acabou ficando mal distribuido pelo pouco tempo também de desenvolvimento, por esse motivo as credenciais ficaram mocadas no código, para conseguir ser autenticado deverá ser informado o seguinte payload:
+{
+  "email": "admin@teste.com",
+  "password": "123456"
+}
 
 ---
 
