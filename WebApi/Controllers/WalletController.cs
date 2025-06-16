@@ -28,6 +28,7 @@ namespace WebApi.Controllers
             return Ok(walletId);
         }
 
+        [Authorize]
         [HttpPut]
         public async Task<IActionResult> AddBalance([FromBody] PutWalletBalanceCommand command)
         {
