@@ -1,11 +1,11 @@
-version: '3.8'  # Removi a 3.4 como sugerido no warning
+version: '3.8'  
 
 services:
   credutpay:
     container_name: CredutPayContainer
     build:
-      context: C:/Users/Emerson/Projetos/Credutpay/CredutPay/WebApi
-      dockerfile: Dockerfile  # ou o caminho correto do Dockerfile
+      context: ./WebApi   
+      dockerfile: Dockerfile  
     image: webapi
     ports:
       - "8080:8080"
