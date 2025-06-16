@@ -1,7 +1,10 @@
 # 🚀 Teste CredutPay
 
 API desenvolvida em .NET 8 utilizando arquitetura Clean Architecture com CQRS + MediatR, autenticação via JWT e persistência em banco de dados PostgreSQL. O projeto permite gerenciamento de usuários e suas carteiras digitais, com funcionalidades de saldo e transferência entre usuários.
-Informações Adicionais:
+
+---
+
+## Informações Adicionais:
 -Foi criado uma api de Autenticação apenas para fins de como ficaria a implementação, implementei a autenticação apenas na Api de adicionar saldo a carteira(AddBalance) onde implementei um data annotations [Authorize], para ser autenticado basta gerar um token na Api de Auth e passar como parametro na chamada via parametro Authorization Bearer Token.
 -Por conta de serem 2 dias de desenvolvimento não consegui implementar os testes e linter.
 -Usei uma abordagem de cqrs e MediatR pensando no desacoplamento dos serviços e na escalabilidade do projeto.
